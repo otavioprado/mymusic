@@ -1,11 +1,10 @@
 package br.com.ciandt.mymusic.service;
 
-import br.com.ciandt.mymusic.model.Musica;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
-import javax.validation.Valid;
-import javax.validation.constraints.Size;
-import java.util.List;
+import br.com.ciandt.mymusic.model.Musica;
 
 @Service
 public class MusicaServiceBean implements MusicaService {

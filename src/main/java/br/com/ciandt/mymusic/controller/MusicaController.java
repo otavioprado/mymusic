@@ -14,12 +14,11 @@ import java.util.List;
 @RequestMapping("/api")
 public class MusicaController {
 
-    @Autowired
-    MusicaService musicaService;
+	@Autowired
+	MusicaService musicaService;
 
-    @GetMapping(value = "/musicas")
-    public List<Musica> listMusicas(@RequestParam(value = "filtro", required = false) String filtro){
-       return musicaService.listarMusicas(filtro);
-    }
-
+	@GetMapping(value = "/musicas")
+	public List<Musica> listMusicas(@RequestParam(value = "filtro", required = false) String filtro) {
+		return musicaService.listarMusicas(filtro);
+	}
 }

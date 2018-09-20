@@ -12,15 +12,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 			.authorizeRequests()
-				.antMatchers("/**").permitAll()		
-				.antMatchers("/user/**").hasRole("USER")			
+				.anyRequest().authenticated()
+				.antMatchers("/user/**").hasRole("USER")
 				.and()
-			.formLogin()
-				.loginPage("/login").failureUrl("/login-error");	
+				.httpBasic();
 	}
 
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-		auth.inMemoryAuthentication().withUser("user").password("password").roles("USER");
+		auth.inMemoryAuthentication().withUser("user").password("{noop}password").roles("USER");
 	}
 }

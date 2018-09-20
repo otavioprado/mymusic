@@ -1,12 +1,13 @@
 package br.com.ciandt.mymusic.service;
 
-import br.com.ciandt.mymusic.model.Musica;
-import org.springframework.validation.annotation.Validated;
+import java.util.List;
 
 import javax.validation.Valid;
-import javax.validation.constraints.Null;
 import javax.validation.constraints.Size;
-import java.util.List;
+
+import org.springframework.validation.annotation.Validated;
+
+import br.com.ciandt.mymusic.model.Musica;
 
 @Validated
 public interface MusicaService {
