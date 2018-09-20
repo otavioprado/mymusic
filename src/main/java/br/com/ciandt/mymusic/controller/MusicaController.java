@@ -18,7 +18,7 @@ public class MusicaController {
     MusicaService musicaService;
 
     @GetMapping(value = "/musicas")
-    public List<Musica> listMusicas(@RequestParam(value = "filtro") String filtro){
+    public List<Musica> listMusicas(@RequestParam(value = "filtro", required = false) String filtro){
        return musicaService.listarMusicas(filtro);
     }
 
