@@ -18,7 +18,7 @@ public class Usuario {
 	
 	@OneToOne
 	@JoinColumn(name = "playlist_id")
-	private PlayList playList;
+	private Playlist playList;
 	
 	private String nome;
 
@@ -38,11 +38,11 @@ public class Usuario {
 		this.id = id;
 	}
 
-	public PlayList getPlayList() {
+	public Playlist getPlayList() {
 		return playList;
 	}
 
-	public void setPlayList(PlayList playList) {
+	public void setPlayList(Playlist playList) {
 		this.playList = playList;
 	}
 }
